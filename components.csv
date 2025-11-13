@@ -1,0 +1,37 @@
+# 3D 모델 컴포넌트 정의 파일
+# 단위: mm
+
+name,type,parent,L,W,T,D,H,cx,cy,cz,color,coord_file,coord_has_header
+
+# 메인 베이스 플레이트
+base_plate,box,,200,150,10,,,0,0,5,lightgray,,
+
+# 상부 어셈블리
+upper_assy,assembly,,,,,,,-50,0,50,,,
+
+# 상부 어셈블리 내부의 박스
+upper_box,box,upper_assy,80,60,20,,,0,0,0,silver,,
+
+# 원통형 지지대 1
+support_cyl1,cyl,,,,,20,100,-60,-40,50,olivedrab,,
+
+# 원통형 지지대 2
+support_cyl2,cyl,,,,,20,100,60,-40,50,olivedrab,,
+
+# 중앙 구체
+center_sphere,sphere,,,,,30,,0,0,80,orange,,
+
+# 우측 어셈블리
+right_assy,assembly,,,,,,,80,0,30,,,
+
+# 우측 어셈블리 내부 작은 박스
+right_small_box,box,right_assy,30,30,30,,,0,0,0,lightblue,,
+
+# 우측 어셈블리 내부 작은 구
+right_small_sphere,sphere,right_assy,,,,,15,0,0,25,yellow,,
+
+# 볼 베어링 그룹 1
+ball_group1,balls,,,,,,8,0,0,15,red,balls_pattern1.txt,true
+
+# 좌측 볼 베어링 그룹 2
+ball_group2,balls,,,,,,5,-70,30,20,blue,balls_pattern2.txt,yes
